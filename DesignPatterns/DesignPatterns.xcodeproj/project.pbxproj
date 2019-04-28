@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3023D2F1227594BB00B4B3D3 /* OrderViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3023D2F0227594BB00B4B3D3 /* OrderViewPresenter.swift */; };
 		305B78D822752C3900DAB0BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305B78D722752C3900DAB0BC /* AppDelegate.swift */; };
 		305B78DA22752C3900DAB0BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305B78D922752C3900DAB0BC /* ViewController.swift */; };
 		305B78DD22752C3900DAB0BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305B78DB22752C3900DAB0BC /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3023D2F0227594BB00B4B3D3 /* OrderViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewPresenter.swift; sourceTree = "<group>"; };
 		305B78D422752C3900DAB0BC /* DesignPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		305B78D722752C3900DAB0BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		305B78D922752C3900DAB0BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				305B78E9227540E100DAB0BC /* Templates.swift */,
 				305B78EB2275475900DAB0BC /* Extension.swift */,
 				305B78EF2275568800DAB0BC /* Order.swift */,
+				3023D2F0227594BB00B4B3D3 /* OrderViewPresenter.swift */,
 			);
 			path = DesignPatterns;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				305B78DA22752C3900DAB0BC /* ViewController.swift in Sources */,
 				305B78D822752C3900DAB0BC /* AppDelegate.swift in Sources */,
 				305B78F02275568800DAB0BC /* Order.swift in Sources */,
+				3023D2F1227594BB00B4B3D3 /* OrderViewPresenter.swift in Sources */,
 				305B78EA227540E100DAB0BC /* Templates.swift in Sources */,
 				305B78EC2275475900DAB0BC /* Extension.swift in Sources */,
 			);

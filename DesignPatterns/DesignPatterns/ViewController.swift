@@ -17,27 +17,22 @@ class ViewController: UIViewController {
   @IBOutlet weak var buyButton: UIButton!
   
   var yourOrder: Order?
+  var orderViewPresenter: OrderViewPresenter?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     dataInitialization()
-    updateUIBy(yourOrder)
+    orderViewPresenter = OrderViewPresenter(order: yourOrder, delegate: self)
   }
   
-  
   @IBAction func didTapOnDecreaseButton(_ sender: Any) {
-    let updatedQuantity = (Int(quantityLabel.text ?? "0") ?? 0) - 1
-    yourOrder?.setQuantity(updatedQuantity)
-    updateUIBy(yourOrder)
+    orderViewPresenter?.decreaseQuantity(quantityLabel.text)
   }
   
   @IBAction func didTapOnIncreaseButton(_ sender: Any) {
-    let updatedQuantity = (Int(quantityLabel.text ?? "0") ?? 0) + 1
-    yourOrder?.setQuantity(updatedQuantity)
-    updateUIBy(yourOrder)
+    orderViewPresenter?.increaseQuantity(quantityLabel.text)
   }
-  
   
   @IBAction func didTapOnBuyButton(_ sender: Any) {
     let alert = UIAlertController(title: "Successful", message: yourOrder?.getOrderInformation(), preferredStyle: .alert)
@@ -88,8 +83,16 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    yourOrder?.setTitle(templates[indexPath.row].title)
-    yourOrder?.setPrice(templates[indexPath.row].price)
-    updateUIBy(yourOrder)
+    orderViewPresenter?.setInformation(templates[indexPath.row].title, price: templates[indexPath.row].price)
+  }
+}
+
+extension ViewController: OrderViewProtocol {
+  func updateModel(order: Order?) {
+    yourOrder = order
+  }
+  
+  func updateUI(order: Order?) {
+    updateUIBy(order)
   }
 }
